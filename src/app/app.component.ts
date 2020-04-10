@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Anthony KWAN CHUNG';
+  title = 'Anthony KWAN CHUNG'
+  displayShowMovies: boolean = true;
 }
