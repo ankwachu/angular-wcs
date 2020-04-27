@@ -8,6 +8,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { MenuComponent } from './components/menu/menu.component';
 import { ROUTES } from './app.routes';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

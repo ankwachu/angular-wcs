@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
+  User = {
+    name : 'Doe',
+    firstName : 'John',
+    age : 25,
+    quote : '',
+    photo : 'https://randomuser.me/api/portraits/lego/2.jpg'
+  };
 
+  isShow = false;
+ 
+  toggleDisplay() {
+    this.isShow = !this.isShow;
+  }
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
