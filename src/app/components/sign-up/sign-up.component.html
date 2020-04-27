@@ -4,9 +4,9 @@
             <form (ngSubmit)="myForm.valid && onSubmit()" #myForm="ngForm">
                 <div class="form-group">
                     <label for="lastname-user">Name</label>
-                    <input name="lastname-user" class="form-control" type="text" [(ngModel)]="model.lastname" #name="ngModel" minlength="3" maxlength="15" required [ngClass]="{ 'is-invalid': myForm.submitted && name.invalid }">
+                    <input name="lastname-user" class="form-control" type="text" [(ngModel)]="model.lastname" #lastname="ngModel" minlength="3" maxlength="15" required [ngClass]="{ 'is-invalid': myForm.submitted && lastname.invalid }">
                 </div>
-                <div *ngIf="myForm.submitted && name.errors" class="alert alert-danger" role="alert">
+                <div *ngIf="myForm.submitted && lastname.errors" class="alert alert-danger" role="alert">
                     <span *ngIf="lastname.errors?.required">Le nom est requis</span>
                     <span *ngIf="lastname.errors?.minlength">Le nom doit comporter au moins 3 caractères</span>
                     <span *ngIf="lastname.errors?.maxlength">Le nom ne doit pas dépasser 15 caractères</span>
