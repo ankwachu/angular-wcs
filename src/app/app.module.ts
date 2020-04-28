@@ -9,6 +9,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { ROUTES } from './app.routes';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SearchMovieComponent } from './components/search-movie/search-movie.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +19,14 @@ import { FormsModule } from '@angular/forms';
     ShowMoviesDirective,
     SignUpComponent,
     UserProfileComponent,
-    MenuComponent
+    MenuComponent,
+    SearchMovieComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(ROUTES),
-    FormsModule
-
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
