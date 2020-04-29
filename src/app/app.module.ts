@@ -1,16 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HighlightDirective } from './highlight.directive';
+import { ShowMoviesDirective } from './show-movies.directive';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { ROUTES } from './app.routes';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SearchMovieComponent } from './components/search-movie/search-movie.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HighlightDirective,
+    ShowMoviesDirective,
+    SignUpComponent,
+    UserProfileComponent,
+    MenuComponent,
+    SearchMovieComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot(ROUTES),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
