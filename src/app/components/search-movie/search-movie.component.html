@@ -1,39 +1,48 @@
 <div class="container">
-    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)" #Form="ngForm">
-      <div formGroupName="id">
-        <h4>Searching ID</h4>
-        <label for="identifiant">Identifiant :</label>
-        <input type="text" formControlName="identifiant">
-        <br>
-        <label for="titre">Titre :</label>
-        <input name="titre" type="text" formControlName="titre">
-      </div>
-      <div *ngIf="Form.submitted">
-        <span *ngIf="myForm.controls.id.errors">{{myForm.controls.id.errors.isRequired}}</span>
-      </div>
-      <div>
-        <label>Type :</label>
-        <select formControlName="type">
-          <option value="film">Film</option>
-          <option value="serie">Série</option>
-          <option value="episode">Episode</option>
-        </select>
-      </div>
-      <div>
-        <label for="annee">Année de sortie :</label>
-        <input name="annee" type="number" formControlName="annee">
-      </div>
-      <div *ngIf="Form.submitted">
-        <span *ngIf="myForm.get('annee').errors">{{myForm.get('annee').errors.min}}</span>
-      </div>
-      <div>
-        <label>Fiche :</label>
-        <select formControlName="fiche">
-          <option value="complete">Complète</option>
-          <option value="courte">Courte</option>
-        </select>
-      </div>
-  
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+    <div class="row">
+        <div class="col-6">
+            <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)" #Form="ngForm">
+                <div>
+                    <div>Form submitted ? {{Form.submitted}}</div>
+                    <div>Form valid ? {{myForm.valid}}</div>
+                    <div>Form invalid ? {{myForm.valid}}</div>
+                </div>
+                <div formGroupName="id">
+                    <h4>Searching movie</h4>
+                    <label for="identifiant">Identifiant :</label>
+                    <input type="text" formControlName="identifiant" class="form-control">
+
+                    <label for="titre">Titre :</label>
+                    <input name="titre" type="text" formControlName="titre" class="form-control">
+                </div>
+                <div *ngIf="Form.submitted">
+                    <span *ngIf="myForm.controls.id.errors" class="alert alert-danger form-control"
+                        role="alert">{{myForm.controls.id.errors.isRequired}}</span>
+                </div>
+                <div>
+                    <label>Type :</label>
+                    <select formControlName="types" class="form-control">
+                        <option *ngFor="let type of types; let i = index" [value]="types[i].id">{{ types[i].type }}</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="date">Année de sortie :</label>
+                    <input name="date" type="number" formControlName="date" class="form-control">
+                </div>
+                <div *ngIf="Form.submitted">
+                    <span *ngIf="myForm.controls.date.errors" class="alert alert-danger form-control"
+                        role="alert">{{myForm.controls.date.errors.min}}</span>
+                </div>
+                <div>
+                    <label>Fiche :</label>
+                    <select formControlName="fiches" class="form-control">
+                        <option *ngFor="let fiche of fiches; let i = index" [value]="fiches[i].id">{{ fiches[i].fiche }}</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-success mt-3">Submit</button>
+
+            </form>
+        </div>
+    </div>
+</div>
