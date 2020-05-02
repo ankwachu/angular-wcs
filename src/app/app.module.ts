@@ -11,6 +11,8 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchMovieComponent } from './components/search-movie/search-movie.component';
+import { DevelopperComponent } from './components/developper/developper.component';
+import { SkillComponent } from './components/skill/skill.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SearchMovieComponent } from './components/search-movie/search-movie.com
     SignUpComponent,
     UserProfileComponent,
     MenuComponent,
-    SearchMovieComponent
+    SearchMovieComponent,
+    DevelopperComponent,
+    SkillComponent
   ],
   imports: [
     BrowserModule,
