@@ -1,5 +1,7 @@
 export class Skill {
-    name: string;
-    logo: string;
-    site: string;
+    constructor(
+        public name: string,
+        public logo: string,
+        public site: string
+    ) {}
 }

@@ -1,2 +1,11 @@
-<p>developper works!</p>
-<app-skill></app-skill>
+<div class="container">
+    <div>
+        <p>prénom : {{developper.firstName}}</p>
+        <p>nom : {{developper.lastName}}</p>
+        <p>age : {{developper.age}}</p>
+        <p>sexe : {{developper.sexe}}</p>
+        <p>bio : {{developper.bio}}</p>
+    </div>
+    <div>Your skills :</div>
+    <app-skill [skill]="skilpD" *ngFor="let skilpD of skillArray"></app-skill>
+</div>
