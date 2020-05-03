@@ -13,6 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SearchMovieComponent } from './components/search-movie/search-movie.component';
 import { DevelopperComponent } from './components/developper/developper.component';
 import { SkillComponent } from './components/skill/skill.component';
+import { OnomatopiaComponent } from './components/onomatopia/onomatopia.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { SkillComponent } from './components/skill/skill.component';
     MenuComponent,
     SearchMovieComponent,
     DevelopperComponent,
-    SkillComponent
+    SkillComponent,
+    OnomatopiaComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
