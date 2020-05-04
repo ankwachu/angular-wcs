@@ -15,6 +15,7 @@ import { DevelopperComponent } from './components/developper/developper.componen
 import { SkillComponent } from './components/skill/skill.component';
 import { OnomatopiaComponent } from './components/onomatopia/onomatopia.component';
 import { HomeComponent } from './components/home/home.component';
+import { OnomatopiaListComponent } from './components/onomatopia-list/onomatopia-list.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HomeComponent } from './components/home/home.component';
     DevelopperComponent,
     SkillComponent,
     OnomatopiaComponent,
-    HomeComponent
+    HomeComponent,
+    OnomatopiaListComponent
   ],
   imports: [
     BrowserModule,

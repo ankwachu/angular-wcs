@@ -5,16 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
-message: string;
-  constructor() { }
-
-  ngOnInit(): void {
+export class HomeComponent{
+  storedPosts = []
+ 
+  onPostAdded(event) {
+    this.storedPosts.push(event);
   }
-
-  onDataChange($event) {
-    this.message = $event;
-    console.log($event);
-    // 'String sent by child component to parent component'
-  }
+ 
 }

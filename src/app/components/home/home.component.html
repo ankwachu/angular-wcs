@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Parent</h1>
-    <p>message from child : {{ message}}</p>
-    <app-onomatopia (dataChange)="onDataChange($event)"></app-onomatopia>
+    
+    <app-onomatopia (postCreated)="onPostAdded($event)"></app-onomatopia>
+    <app-onomatopia-list [posts]="storedPosts"></app-onomatopia-list>
 </div>

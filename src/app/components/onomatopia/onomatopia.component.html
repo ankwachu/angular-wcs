@@ -1,4 +1,9 @@
-<h2>Child</h2>
-<button (click)="sendDataToParent()">
-    click
- </button>
+<h3>Create Post</h3>
+ 
+<form>
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" class="form-control" name="title" [(ngModel)]="post.title" placeholder="Your fav story">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="onAddPost()">Create</button>
+  </form>

@@ -1,21 +1,30 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
+export interface Post {
+  title:string;
+}
+
 @Component({
   selector: 'app-onomatopia',
   templateUrl: './onomatopia.component.html',
   styleUrls: ['./onomatopia.component.css']
 })
-export class OnomatopiaComponent implements OnInit {
+export class OnomatopiaComponent {
 
-  @Output() 
-  dataChange = new EventEmitter<string>();
-  
-  constructor() { }
-
-  ngOnInit(): void {
+  post:Post; 
+ 
+  @Output() postCreated = new EventEmitter<Post>();
+ 
+  constructor() {
+    this.post = {} as Post;
   }
-
-  sendDataToParent() {
-    this.dataChange.emit('String sent by child component to parent component');
+ 
+  onAddPost(){
+    const post = {
+      title: this.post.title
+    }
+    this.postCreated.emit(post);
+    console.log(post);
   }
+ 
 }
