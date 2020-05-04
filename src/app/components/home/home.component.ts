@@ -11,5 +11,9 @@ export class HomeComponent{
   onPostAdded(event) {
     this.storedPosts.push(event);
   }
+
+  greet(post) {
+    alert(post.title);
+  }
  
 }

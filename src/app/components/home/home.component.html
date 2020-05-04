@@ -1,5 +1,4 @@
 <div class="container">
-    
-    <app-onomatopia (postCreated)="onPostAdded($event)"></app-onomatopia>
+    <app-onomatopia (postCreated)="onPostAdded($event);greet($event)"></app-onomatopia>
     <app-onomatopia-list [posts]="storedPosts"></app-onomatopia-list>
 </div>
