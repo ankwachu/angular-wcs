@@ -18,6 +18,7 @@ import { OnomatopiaComponent } from './components/onomatopia/onomatopia.componen
 import { HomeComponent } from './components/home/home.component';
 import { OnomatopiaListComponent } from './components/onomatopia-list/onomatopia-list.component';
 import { CocktailListComponent } from './components/cocktail-list/cocktail-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CocktailListComponent } from './components/cocktail-list/cocktail-list.
     BrowserModule,
     RouterModule.forRoot(ROUTES),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [CocktailService],
   bootstrap: [AppComponent]

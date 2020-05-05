@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "name": "mojito",
+        "price": "10",
+        "img": "https://assets.afcdn.com/recipe/20180705/80255_w648h344c1cx2774cy1849cxt0cyt0cxb5541cyb3691.jpg"
+    },
+    {
+        "id": "2",
+        "name": "gin tonic",
+        "price": "8",
+        "img": "https://assets.afcdn.com/recipe/20180801/81651_w648h344c1cx2061cy1395cxt0cyt0cxb4118cyb2787.jpg"
+    },
+    {
+        "id": "3",
+        "name": "white russian",
+        "price": "10",
+        "img": "https://assets.afcdn.com/recipe/20180801/81664_w648h344c1cx3976cy2652cxt0cyt0cxb7950cyb5300.jpg"
+    }
+]
