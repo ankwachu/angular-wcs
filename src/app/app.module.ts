@@ -1,3 +1,4 @@
+import { CocktailService } from './cocktail.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { SkillComponent } from './components/skill/skill.component';
 import { OnomatopiaComponent } from './components/onomatopia/onomatopia.component';
 import { HomeComponent } from './components/home/home.component';
 import { OnomatopiaListComponent } from './components/onomatopia-list/onomatopia-list.component';
+import { CocktailListComponent } from './components/cocktail-list/cocktail-list.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { OnomatopiaListComponent } from './components/onomatopia-list/onomatopia
     SkillComponent,
     OnomatopiaComponent,
     HomeComponent,
-    OnomatopiaListComponent
+    OnomatopiaListComponent,
+    CocktailListComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,7 @@ import { OnomatopiaListComponent } from './components/onomatopia-list/onomatopia
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [CocktailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
