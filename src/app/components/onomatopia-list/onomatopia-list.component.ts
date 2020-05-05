@@ -6,7 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./onomatopia-list.component.css']
 })
 export class OnomatopiaListComponent implements OnInit {
+  
   @Input() posts = [];
+
   constructor() { }
 
   ngOnInit(): void {

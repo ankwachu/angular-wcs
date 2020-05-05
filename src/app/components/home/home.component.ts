@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent{
   storedPosts = []
- 
+z
   onPostAdded(event) {
     this.storedPosts.push(event);
   }
